@@ -804,33 +804,33 @@ nav ul li a:hover {
   display: block;
   width: 60px;
   height: 4px;
-  background: #007bff; /* Accent color */
-  margin: 10px auto 0; /* Centers the underline */
+  background: #007bff;  
+  margin: 10px auto 0;  
   border-radius: 2px;
 }
 
-/* Resume Button */
+ 
 #resume .btn {
   display: inline-block;
   padding: 12px 30px;
   font-size: 1.2rem;
-  color: #fff; /* White text color */
-  background: linear-gradient(90deg, #007bff, #0056b3); /* Gradient blue */
+  color: #fff;  
+  background: linear-gradient(90deg, #007bff, #0056b3);  
   text-decoration: none;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for button */
-  transition: all 0.3s ease; /* Smooth transition */
-  font-family: 'Poppins', sans-serif; /* Modern font */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+  transition: all 0.3s ease;  
+  font-family: 'Poppins', sans-serif;  
 }
 
 #resume .btn:hover {
-  transform: translateY(-3px); /* Lifts button on hover */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow */
-  background: linear-gradient(90deg, #0056b3, #003d80); /* Darker gradient */
+  transform: translateY(-3px);  
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);  
+  background: linear-gradient(90deg, #0056b3, #003d80);  
 }
 
-/* Responsive Design */
+ 
 @media (max-width: 768px) {
   #resume {
       padding: 40px 15px;
@@ -845,7 +845,7 @@ nav ul li a:hover {
 }
 
 
-/* Responsive Design */
+ 
 @media (max-width: 1024px) {
   .blog-container, .talk-container {
     grid-template-columns: 1fr 1fr;
