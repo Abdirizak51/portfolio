@@ -6,203 +6,384 @@
   <title>Abdirizak-portfolio</title>
   
   <link rel="stylesheet" href="style.css">
+  <script rel="script.js " href="script.js"></script>
+  <head>
+   
+</head>
+
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <div class="logo">ABDIRIZAK </div>
-    <nav>
+ <header>
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="./images/logo.jpeg" alt="Logo">
+      <span>Abdirizak Ali</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="nav-menu">
       <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#open-source">open-source</a></li>
-        <li><a href="#achievements">achievements</a></li>
-        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="#cv">CV Resume</a></li>
         <li><a href="#blogs">Blogs</a></li>
-
-      
+         
       </ul>
-    </nav>
+       
+
+    <!-- Desktop Actions -->
+    <div class="header-actions">
+      <a href="#contact" class="btn-talk">Contact US</a>
+      <div class="dark-toggle">🌙</div>
+    </div>
   </header>
-
-
-
   <!-- Hero Section -->
-  <section id="about">
-    <div class="about-container">
-      <div class="hero-about">
-        <h1>Welcome to My Portfolio 👋</h1>
-        <p>waxaan ahay developer qabta shaqooyin kala duwan waxaan kuudhisi karaa websites ka aad ubaahantahay iyo guud ahaan howlaha hoos kuxusan </p>
-        <div class="buttons">
-          <a href="#contact" class="btn">Contact Me</a>
-          <a href="#resume" class="btn">See My Resume</a>
+  <section id="hero">
+    <div class="hero-content">
+      <h1><span class="wave">👋</span> I am <br> <strong>Abdirizak</strong></h1>
+      <h2 class="subtitle">Web Developer</h2>
+      <p>
+        Hi, I’m Abdirizak Ali, a passionate full-stack developer. 
+        I love creating responsive and user-friendly websites for small businesses.
+      </p>
+      <div class="buttons">
+        <a href="#contact" class="btn">Contact Me</a>
+        <a href="#resume" class="btn secondary">See My Resume</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="./images/suit.jpeg" alt="Me in Graduation">
+    </div>
+  </section>
+ 
+
+  <!-- Services Section -->
+<section id="services" class="services-section">
+  <div class="container">
+    <h2 class="section-title">My Services</h2>
+    <p class="section-subtitle">Professional solutions tailored for your business</p>
+
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="service-icon">🛡️</div>
+        <h3>Network Security</h3>
+        <p>Protect your business network and data from cyber threats with advanced security solutions.</p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="service-icon">📈</div>
+        <h3>Marketing</h3>
+        <p>Boost your brand and reach more customers through digital marketing, SEO, and social media strategies.</p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>Web Development</h3>
+        <p>Create responsive, modern, and user-friendly websites tailored to your business needs.</p>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card">
+        <div class="service-icon">🖥️</div>
+        <h3>Computer Engineering</h3>
+        <p>Design, optimize, and maintain your IT infrastructure with expert engineering solutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+   
+<!-- Skills Section with Progress Circles -->
+<section id="skills" class="skills-section">
+  <div class="container">
+    <h2 class="section-title">My Skills</h2>
+    <p class="section-subtitle">A combination of technical expertise and soft skills</p>
+
+    <div class="skills-grid">
+      <!-- Hard Skills with Progress -->
+      <div class="skills-card">
+        <div class="skills-icon">🛠</div>
+        <h3>Hard Skills</h3>
+        <div class="skill-progress">
+          <div class="skill">
+            <span>Graphic Design</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Web Development</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Networking & Security</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Sales & Marketing</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%;"></div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="about-image">
-        <img src="./images/WhatsApp Image 2024-12-03 at 15.04.36_901fd57c.jpg" alt="Portrait of Me">
-      </div>
-    </div>
-  </section>
-  
-      <div class="social-icons">
-        <a href="https://github.com/Abdirizak51"><img src="./images/R (1).png" alt="GitHub"></a>
-        <a href="https://www.linkedin.com/in/abdirizak-ali-6467742a6/"><img src="./images/R.png" alt="LinkedIn"></a>
-        <a href="#"><img src="./images/R (2).png" alt="Google"></a>
-        <a href="https://www.facebook.com/profile.php?id=100090301233389&mibextid=ZbWKwL"><img src="./images/R (3).png" alt="Facebook"></a>
-      </div>
-    </div>
-     
-  </section>
 
-  <!--  Open Source -->
-<section id="open-source">
-    <h2>Open Source</h2>
-    <p>I actively contribute to open-source projects on platforms like GitHub and GitLab. Below are some of my contributions:</p>
-    <ul>
-      <li><a href="#">Project 1</a></li>
-      <li><a href="#">Project 2</a></li>
-      <li><a href="#">Project 3</a></li>
-    </ul>
-  </section>
-  
-  <!--  Achievements -->
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <ul>
-      <li>Completed Full Stack Development Certification</li>
-      <li>Contributed to several open-source projects</li>
-      <li>Built multiple web and mobile applications</li>
-      <li>Spoken at local tech meetups and conferences</li>
-    </ul>
-  </section>
-  
+      <!-- Soft Skills -->
+      <div class="skills-card">
+        <div class="skills-icon">🤝</div>
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Problem Solving</li>
+          <li>Communication Skills</li>
+          <li>Teamwork & Collaboration</li>
+          <li>Adaptability & Time Management</li>
+        </ul>
+      </div>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>React</li>
-      <li>Node.js</li>
-      <li>Communiccation skill</li>
-    </ul>
-  </section>
-
- <!-- Projects Section -->
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="projects-container">
-    <div class="project">
-      <div class="project-image">
-        <img src="./images/OIP.jpg" alt="Project 1">
-      </div>
-      <div class="project-details">
-        <h3>Project 1 (Coming Soon)</h3>
-        <p>This project is currently under development. Stay tuned for updates!</p>
-        <a href="#" class="view-project">View Project</a>
-      </div>
-    </div>
-    
-    <div class="project">
-      <div class="project-image">
-        <img src="./images/R (4).png" alt="Project 2">
-      </div>
-      <div class="project-details">
-        <h3>Project 2 (Coming Soon)</h3>
-        <p>This project is currently under development. Stay tuned for updates!</p>
-        <a href="#" class="view-project">View Project</a>
+      <!-- Languages -->
+      <div class="skills-card">
+        <div class="skills-icon">🌍</div>
+        <h3>Languages</h3>
+        <ul>
+          <li>Somali (Native)</li>
+          <li>English (Fluent)</li>
+          <li>Arabic (Good in Writing & Speaking)</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
+<section id="certificates">
+  <h2 class="section-title">Certificates & Achievements</h2>
+
+  <div class="carousel-container">
+    <button class="carousel-btn prev">‹</button>
+
+    <div class="carousel-track">
+      <!-- Certificate 1 -->
+      <div class="certificate-card">
+        <img src="./images/coursera.png" alt="Johns Hopkins Certificate">
+        <h3>HTML, CSS, and Javascript for Web Developers</h3>
+        <p><strong>Issuer:</strong> Johns Hopkins University / Coursera</p>
+        <p><strong>Date:</strong> Dec 1, 2024</p>
+        <p><strong>Recipient:</strong> Abdirizak Ali Abdikariim</p>
+      </div>
+
+      <!-- Certificate 2 -->
+      <div class="certificate-card">
+        <img src="./images/yali.png" alt="Al Yali Network Certificate">
+        <h3>Digital Marketing for Entrepreneurs</h3>
+        <p><strong>Issuer:</strong> Al Yali Network / Young African Leaders Initiative</p>
+        <p><strong>Recipient:</strong> Abdirizak Ali Abdikariim</p>
+      </div>
+
+      <!-- Certificate 3 -->
+      <div class="certificate-card">
+        <img src="./images/cisco.jpeg" alt="Cisco Certificate">
+        <h3>Cisco Certified Network Associate (CCNA)</h3>
+        <p><strong>Issuer:</strong> Cisco Systems, Inc.</p>
+        <p><strong>Date Certified:</strong> August 20, 2025</p>
+        <p><strong>Valid Through:</strong> August 20, 2028</p>
+        <p><strong>Recipient:</strong> Abdirizak Ali</p>
+      </div>
+    </div>
+
+    <button class="carousel-btn next">›</button>
+  </div>
+</section>
+
+
+ <!-- CV / Resume Section -->
+<section id="cv" class="cv-section">
+  <div class="container">
+    <h2 class="section-title">CV / Resume</h2>
+    <p class="section-subtitle">Professional overview of Abdirizak Ali</p>
+
+    <div class="cv-grid">
+      <!-- Profile -->
+      <div class="cv-card">
+        <div class="cv-icon">👤</div>
+        <h3>Profile</h3>
+        <p>
+          Creative and motivated professional with strong expertise in Graphic Design, Web Development, and Networking Engineering, combined with proven experience in Sales and Marketing. Skilled in problem-solving, teamwork, and effective communication. Passionate about using technology and creativity to design solutions that drive growth and innovation.
+        </p>
+        <p><strong>Email:</strong> 📧 abdirizak873@gmail.com</p>
+        <p><strong>LinkedIn:</strong> 🔗 Abdirizak Ali</p>
+      </div>
+
+      <!-- Education -->
+      <div class="cv-card">
+        <div class="cv-icon">🎓</div>
+        <h3>Education</h3>
+        <ul>
+          <li>Bachelor of Computer Science (CS) – In Progress, Salaam University</li>
+          <li>High School Graduate</li>
+        </ul>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="cv-card">
+        <div class="cv-icon">💼</div>
+        <h3>Work Experience</h3>
+        <ul>
+          <li><strong>Sales Specialist</strong>
+            <ul>
+              <li>Developed strong customer relationship and communication skills.</li>
+              <li>Increased sales performance through effective marketing strategies.</li>
+              <li>Experienced in client handling and team collaboration.</li>
+            </ul>
+          </li>
+          <li><strong>Web Security Assistant (Freelance/Project Work)</strong>
+            <ul>
+              <li>Assisted in securing websites against cyber threats.</li>
+              <li>Applied basic networking and security measures to protect data.</li>
+              <li>Collaborated with developers to improve system safety.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Skills -->
+      <div class="cv-card">
+        <div class="cv-icon">🛠</div>
+        <h3>Skills</h3>
+        <div class="skills-subgrid">
+          <div>
+            <h4>Hard Skills</h4>
+            <ul>
+              <li>Graphic Design (Photoshop, Illustrator, Canva)</li>
+              <li>Web Development (HTML, CSS, JavaScript)</li>
+              <li>Networking & Web Security (Routing, Switching, Basic Cybersecurity)</li>
+              <li>Sales & Marketing Strategies</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Soft Skills</h4>
+            <ul>
+              <li>Problem Solving</li>
+              <li>Communication Skills</li>
+              <li>Teamwork & Collaboration</li>
+              <li>Adaptability & Time Management</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Languages</h4>
+            <ul>
+              <li>Somali (Native)</li>
+              <li>English (Fluent)</li>
+              <li>Arabic (Good in Writing & Speaking)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Blogs Section -->
-<section id="blogs">
-  <h2>Blogs</h2>
-  <div class="blog-container">
-    <div class="blog">
-      <div class="blog-image">
-        <img src="./images/3d-web-developer-working-on-project-illustration-png.webp" alt="Blog oe img">
-      </div>
-      <div class="blog-details">
-        <h3>How to Learn Web Development</h3>
-        <p>Learn the best strategies and resources to start your journey into web development.</p>
-        <a href="#" class="read-more">Read More</a>
-      </div>
-    </div>
+<section id="blogs" class="blogs-section">
+  <div class="container">
+    <h2 class="section-title">Latest Blogs</h2>
+    <p class="section-subtitle">Insights, tutorials, and updates from my tech journey</p>
 
-    <div class="blog">
-      <div class="blog-image">
-        <img src="./images/js.jfif" alt="Blog 2">
+    <div class="blogs-grid">
+      <!-- Blog 1 -->
+      <div class="blog-card">
+        <img src="./images/network.webp" alt="Blog 1">
+        <div class="blog-content">
+          <h3>Understanding Network Security Basics</h3>
+          <p>Learn the fundamental principles of network security to protect your business and personal data.</p>
+          <p class="blog-date">📅 September 12, 2025</p>
+          <a href="#readmore" class="btn-read">Read More</a>
+        </div>
       </div>
-      <div class="blog-details">
-        <h3>Introduction to JavaScript</h3>
-        <p>Understand the basics of JavaScript and how it powers modern web development.</p>
-        <a href="#" class="read-more">Read More</a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Talks Section -->
-<section id="talks">
-  <h2>Talks</h2>
-  <div class="talk-container">
-    <div class="talk">
-      <div class="talk-image">
-        <img src="./images/feture.jfif" alt="Talk img">
+      <!-- Blog 2 -->
+      <div class="blog-card">
+        <img src="./images/web.webp" alt="Blog 2">
+        <div class="blog-content">
+          <h3>Top Web Development Tips for Beginners</h3>
+          <p>Discover practical tips and best practices for creating responsive and efficient websites.</p>
+          <p class="blog-date">📅 September 10, 2025</p>
+          <a href="#readmore" class="btn-read">Read More</a>
+        </div>
       </div>
-      <div class="talk-details">
-        <h3>Tech Talks: Future of Web Development</h3>
-        <p>A deep dive into the latest trends and technologies shaping the future of web development.</p>
-        <a href="#" class="view-talk">Watch Talk</a>
-      </div>
-    </div>
 
-    <div class="talk">
-      <div class="talk-image">
-        <img src="./images/ai.png" alt="Talk 2">
+      <!-- Blog 3 -->
+      <div class="blog-card">
+        <img src="./images/marketing.png" alt="Blog 3">
+        <div class="blog-content">
+          <h3>Effective Digital Marketing Strategies</h3>
+          <p>Boost your online presence with these essential marketing strategies for 2025.</p>
+          <p class="blog-date">📅 September 8, 2025</p>
+          <a href="#readmore" class="btn-read">Read More</a>
+        </div>
       </div>
-      <div class="talk-details">
-        <h3>AI in Web Development</h3>
-        <p>Exploring the role of Artificial Intelligence in enhancing user experience and website functionality.</p>
-        <a href="#" class="view-talk">Watch Talk</a>
+
+      <!-- Blog 4 -->
+      <div class="blog-card">
+        <img src="./images/cyber.webp" alt="Blog 4">
+        <div class="blog-content">
+          <h3>Cybersecurity Threats to Watch Out For</h3>
+          <p>Stay informed about the latest cybersecurity threats and how to protect your digital assets.</p>
+          <p class="blog-date">📅 September 5, 2025</p>
+          <a href="#readmore" class="btn-read">Read More</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Contact Me</h2>
+    <p class="section-subtitle">Get in touch with me for collaboration or inquiries</p>
 
-
-  
-
-  <!-- Resume Section -->
-  <section id="resume">
-    <h2>Resume</h2>
-    <a href="resume.pdf" class="btn" download>Download My Resume</a>
-  </section>
-
-  <section id="contact">
-    <div class="contact-container">
+    <div class="contact-grid">
+      <!-- Contact Info -->
       <div class="contact-info">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:Abdirizak873@gmail.com">Abdirizak873@gmail.com</a></p>
-        <p>Phone: <a href="tel:+252616765128">+252616765128</a></p>
+        <div class="info-card">
+          <div class="info-icon">📧</div>
+          <h3>Email</h3>
+          <p><a href="mailto:Abdirizak873@gmail.com">Abdirizak873@gmail.com</a></p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">📞</div>
+          <h3>Phone</h3>
+          <p><a href="tel:+252616765128">+252616765128</a></p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">📍</div>
+          <h3>Location</h3>
+          <p>Mogadishu, Somalia</p>
+        </div>
       </div>
+
+      <!-- Contact Form -->
       <div class="contact-form">
         <form action="#" method="post">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
           <button type="submit" class="btn">Send Message</button>
         </form>
       </div>
     </div>
-  </section>
-  
-
+  </div>
+</section>
+ 
   <!-- Footer -->
 <footer>
   <div class="footer-container">
@@ -218,6 +399,75 @@
     </div>
   </div>
 </footer>
+
+
+ <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+    const darkToggle = document.getElementById('dark-toggle');
+
+// Toggle dark mode
+darkToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+
+  // Change icon 🌙 <-> ☀️
+  if(document.body.classList.contains('dark')) {
+    darkToggle.textContent = '☀️';
+  } else {
+    darkToggle.textContent = '🌙';
+  }
+
+  // Optional: Save preference in localStorage
+  if(document.body.classList.contains('dark')) {
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    localStorage.setItem('darkMode', 'disabled');
+  }
+});
+
+// Load saved mode on page load
+window.addEventListener('load', () => {
+  if(localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark');
+    darkToggle.textContent = '☀️';
+  }
+});
+
+const track = document.querySelector('.carousel-track');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+const cards = Array.from(track.children);
+
+let index = 0;
+
+function updateCarousel() {
+  const cardWidth = cards[0].getBoundingClientRect().width + 30; // card width + gap
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
+// Next button
+nextBtn.addEventListener('click', () => {
+  index = (index + 1) % cards.length;
+  updateCarousel();
+});
+
+// Prev button
+prevBtn.addEventListener('click', () => {
+  index = (index - 1 + cards.length) % cards.length;
+  updateCarousel();
+});
+
+// Optional: Auto-slide every 5s
+setInterval(() => {
+  index = (index + 1) % cards.length;
+  updateCarousel();
+}, 5000);
+
+  </script>
 
 </body>
 </html>    
