@@ -1,78 +1,13 @@
- /* ===== Reset & Base ===== */
+/* ===== Reset & Base ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Smooth transition for all changes */
-body, header, section, .btn, .blog-card, .contact-section, .contact-form, .contact-info .info-card {
-  transition: background 0.4s, color 0.4s, border 0.4s;
-}
-
-/* Default Light Mode */
-body {
-  background: #f4f7f9;
-  color: #111827;
-}
-
-header {
-  background: #0f172a;
-}
-
-.btn-talk, .btn-read, .contact-form button.btn {
-  background: #f97316;
-  color: #fff;
-}
-
-/* Dark Mode */
-body.dark {
-  background: #111827;
-  color: #e5e7eb; /* Light text for dark background */
-}
-
-body.dark header {
-  background: #1f2937; /* Darker header */
-}
-
-body.dark nav ul li a {
-  color: #e5e7eb;
-}
-
-body.dark nav ul li a:hover {
-  color: #f97316;
-}
-
-body.dark .btn-talk, 
-body.dark .btn-read, 
-body.dark .contact-form button.btn {
-  background: #f97316;
-  color: #fff;
-}
-
-body.dark .section-title, 
-body.dark .section-subtitle {
-  color: #e5e7eb;
-}
-
-body.dark .blog-card,
-body.dark .contact-form,
-body.dark .contact-info .info-card {
-  background: #1f2937; /* Dark card background */
-  color: #e5e7eb;
-}
-
-body.dark .contact-info .info-card p a {
-  color: #e5e7eb;
-}
-
-body.dark .contact-info .info-card p a:hover {
-  color: #f97316;
-}
-
 body {
   font-family: 'Arial', sans-serif;
-  background: #f4f7f9;
+  background: #fff;
   color: #111827;
 }
 
@@ -82,100 +17,99 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px 30px;
-  background: #0f172a; /* Dark navy background */
+  padding: 15px 40px;
+  background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* ===== Logo ===== */
+/* ===== Logo (Text Logo) ===== */
 .logo {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  line-height: 1.2;
 }
-
-.logo img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #f97316; /* Orange border for highlight */
+.brand {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: 1px;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
 }
-
-.logo span {
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  text-transform: uppercase;
+.tagline {
+  font-size: 12px;
+  color: #ef4444;
+  margin-left: 3px;
 }
 
 /* ===== Navigation ===== */
 nav {
   flex: 1;
   display: flex;
-  justify-content: center; /* Center nav links horizontally */
-  align-items: center;
+  justify-content: center;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 45px; /* Increase spacing between links */
-}
-
-nav ul li {
-  position: relative;
+  gap: 35px;
 }
 
 nav ul li a {
   text-decoration: none;
-  font-size: 18px; /* Larger font for VIP look */
-  font-weight: 600;
-  color: #fff;
-  padding: 8px 0;
-  transition: color 0.3s, transform 0.3s;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  padding: 6px 18px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
 }
 
-/* Animated underline hover effect */
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 3px; /* thicker underline for VIP look */
-  background: #f97316;
-  transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after,
-nav ul li a.active::after {
-  width: 100%;
-}
-
+/* Active + Hover Effects */
+nav ul li a.active,
 nav ul li a:hover {
-  color: #f97316;
-  transform: scale(1.05);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  transform: scale(1.1); /* kor u boodid yar */
+}
+nav ul li a:not(:hover) {
+  transform: scale(1); /* marka laga gudbo caadi noqdo */
 }
 
-/* ===== Header Actions on right side ===== */
+/* ===== Contact Button ===== */
 .header-actions {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  position: absolute;
-  right: 30px; /* keep actions on far right */
+  margin-left: auto;
 }
 
+.btn-talk {
+  background: #ef4444;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn-talk:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+
+/* ===== Hide dark toggle if not needed ===== */
+.dark-toggle {
+  display: none;
+}
+  /* Hamburger for mobile */ .menu-toggle { display: none; font-size: 28px; color: #fff; cursor: pointer; } /* ===== Mobile Responsive ===== */ @media (max-width: 768px) { nav { position: absolute; top: 70px; right: 0; width: 100%; flex-direction: column; align-items: center; display: none; padding: 20px 0; border-top: 1px solid #222; background: #0f172a; z-index: 999; } nav ul { flex-direction: column; gap: 20px; } nav.show { display: flex; } .header-actions { display: none; /* hide on mobile */ } .menu-toggle { display: block; } } /* Dark Mode Support */ body.dark nav ul li a { color: #e5e7eb; } body.dark nav ul li a:hover, body.dark nav ul li a.active::after { color: #f97316; } /* Glow / Shadow on hover for nav links */ nav ul li a:hover { color: #f97316; transform: scale(1.05); text-shadow: 0 0 8px rgba(249, 115, 22, 0.7), 0 0 12px rgba(249, 115, 22, 0.5); /* subtle orange glow */ } /* Active link glow */ nav ul li a.active { color: #f97316; text-shadow: 0 0 8px rgba(249, 115, 22, 0.7), 0 0 12px rgba(249, 115, 22, 0.5); } /* Dark Mode hover glow */ body.dark nav ul li a:hover, body.dark nav ul li a.active { text-shadow: 0 0 10px rgba(249, 115, 22, 0.8), 0 0 15px rgba(249, 115, 22, 0.6); }
+/* ===== Hero Section ===== */
 /* Hamburger for mobile */
 .menu-toggle {
   display: none;
   font-size: 28px;
-  color: #fff;
+  color: #1f2937; /* midab madow khafiif */
   cursor: pointer;
 }
 
@@ -188,20 +122,21 @@ nav ul li a:hover {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    display: none;
-    padding: 20px 0;
-    border-top: 1px solid #222;
-    background: #0f172a;
+    overflow: hidden;             /* ka hortag inuu isla markiiba soo baxo */
+    max-height: 0;                /* default waa xiranyahay */
+    transition: max-height 0.4s ease-in-out; /* slide effect */
+    background: #fff;
     z-index: 999;
   }
 
   nav ul {
     flex-direction: column;
     gap: 20px;
+    padding: 15px 0;
   }
 
   nav.show {
-    display: flex;
+    max-height: 500px; /* ku filan in menu dhan soo baxo */
   }
 
   .header-actions {
@@ -210,168 +145,249 @@ nav ul li a:hover {
 
   .menu-toggle {
     display: block;
+    font-size: 28px;
+    color: #111827;
+    cursor: pointer;
   }
 }
-
-/* Dark Mode Support */
-body.dark nav ul li a {
-  color: #e5e7eb;
+/* ===== Base Colors (Light Mode Default) ===== */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111827;
+  --accent-color: #ef4444;   /* cas */
+  --card-bg: #f9fafb;
+  --border-color: #e5e7eb;
 }
 
-body.dark nav ul li a:hover,
-body.dark nav ul li a.active::after {
-  color: #f97316;
-}
-/* Glow / Shadow on hover for nav links */
-nav ul li a:hover {
-  color: #f97316;
-  transform: scale(1.05);
-  text-shadow: 0 0 8px rgba(249, 115, 22, 0.7), 
-               0 0 12px rgba(249, 115, 22, 0.5); /* subtle orange glow */
+/* ===== Dark Mode Colors ===== */
+body.dark {
+  --bg-color: #0f172a;      /* madow casri ah */
+  --text-color: #e5e7eb;    /* caddaan khafiif ah */
+  --accent-color: #f97316;  /* orange casri ah */
+  --card-bg: #1e293b;       /* asalka kaarka */
+  --border-color: #334155;
 }
 
-/* Active link glow */
+/* ===== Apply Global Colors ===== */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Header */
+header {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Logo & Tagline */
+.brand {
+  color: var(--text-color);
+}
+.tagline {
+  color: var(--accent-color);
+}
+
+/* Navigation Links */
+nav ul li a {
+  color: var(--text-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+nav ul li a:hover,
 nav ul li a.active {
-  color: #f97316;
-  text-shadow: 0 0 8px rgba(249, 115, 22, 0.7), 
-               0 0 12px rgba(249, 115, 22, 0.5);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
-/* Dark Mode hover glow */
-body.dark nav ul li a:hover,
-body.dark nav ul li a.active {
-  text-shadow: 0 0 10px rgba(249, 115, 22, 0.8),
-               0 0 15px rgba(249, 115, 22, 0.6);
+/* Buttons */
+.btn-talk {
+  background: var(--accent-color);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+/* Cards, sections, hero, etc */
+section, .card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: background 0.4s ease, border 0.4s ease;
+}
+
+/* Dark Mode Toggle Button */
+#dark-toggle {
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 20px;
+  transition: transform 0.3s ease;
+}
+#dark-toggle:hover {
+  transform: rotate(20deg) scale(1.2);
 }
 
 
-/* ===== Hero Section ===== */
+/* Hero Section */
 #hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px 20px 60px; /* padding-ka dhinacyada yaraystay */
-  gap: 30px;
-  flex-wrap: wrap; /* mobile-ka u oggolow inay hoos u dhacaan */
+  padding: 100px 20px 60px;
+  gap: 40px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Hero Content */
 .hero-content {
-  max-width: 500px; /* ka dhiman desktop-ka */
-  flex: 1 1 400px;  /* responsive width */
+  max-width: 520px;
+  flex: 1 1 400px;
+  animation: fadeInUp 1s ease forwards;
 }
 
 .hero-content h1 {
-  font-size: 2.5rem; /* ka dhiman desktop-ka */
+  font-size: 3rem;
   font-weight: 700;
-  color: #111827;
   line-height: 1.2;
 }
 
 .hero-content .subtitle {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 500;
-  color: #6b7280;
-  margin: 10px 0 15px;
+  margin: 15px 0 20px;
+  color: #ffe4cc;
 }
 
 .hero-content p {
-  font-size: 0.95rem;
-  margin-bottom: 20px;
-  color: #374151;
-  line-height: 1.5;
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
 }
 
-.wave {
-  font-size: 2rem;
-  display: inline-block;
-}
-
+/* Buttons */
 .buttons .btn {
   display: inline-block;
   margin-right: 12px;
-  padding: 8px 22px; /* yaraystay padding */
-  border-radius: 25px;
-  font-weight: bold;
+  padding: 10px 26px;
+  border-radius: 30px;
+  font-weight: 600;
   text-decoration: none;
-  background: #f97316;
-  color: #fff;
-  transition: 0.3s;
+  background: #fff;
+  color: #f97316;
+  transition: all 0.3s ease;
 }
 
 .buttons .btn.secondary {
   background: transparent;
-  border: 2px solid #f97316;
-  color: #f97316;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 .buttons .btn:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 25px;
+}
+.social-icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: #111827;
 }
 
 /* Hero Image */
 .hero-image {
-  flex: 1 1 250px; /* responsive width */
+  flex: 1 1 280px;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fadeInRight 1.2s ease forwards;
 }
 
 .hero-image img {
-  width: 250px;      /* size ka siman desktop */
-  height: 250px;     /* same height si uu u noqdo circle */
-  border-radius: 50%; /* wareeg */
-  object-fit: cover;  /* image si qurux badan u buuxiso circle */
-  border: 5px solid #f97316; /* xariijinta border-ka */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* shadow qurux badan */
-  transition: transform 0.3s;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease;
+}
+.hero-image img:hover {
+  transform: scale(1.07);
 }
 
-.hero-image img:hover {
-  transform: scale(1.05); /* effect yar hover */
+/* Scroll Down Cue */
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  opacity: 0.8;
+  animation: bounce 1.5s infinite;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -10px); }
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  .hero-image img {
-    width: 180px;
-    height: 180px;
-  }
-}
-
-/* ===== MOBILE RESPONSIVE ===== */
-@media (max-width: 768px) {
   #hero {
     flex-direction: column-reverse;
-    padding: 80px 15px 40px;
-    gap: 20px;
     text-align: center;
+    padding: 70px 20px 50px;
   }
-
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
-
-  .hero-content .subtitle {
-    font-size: 1.5rem;
-  }
-
-  .hero-content p {
-    font-size: 0.9rem;
-  }
-
   .hero-image img {
-    max-width: 280px;
-    padding: 5px;
+    width: 200px;
+    height: 200px;
   }
-
-  .buttons .btn {
-    margin: 8px 5px 0 5px;
-    padding: 8px 20px;
+  .scroll-down {
+    font-size: 1.2rem;
   }
 }
 
-  
+/* ===== DARK MODE SUPPORT ===== */
+body.dark #hero {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: #e5e7eb;
+}
+body.dark .buttons .btn {
+  background: #f97316;
+  color: #fff;
+}
+body.dark .buttons .btn.secondary {
+  border-color: #f97316;
+  color: #f97316;
+}
+body.dark .social-icons a:hover {
+  color: #f97316;
+}
+
   /* ===== Services Section ===== */
 .services-section {
   padding: 100px 20px;
