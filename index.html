@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdirizak Ali | Web Developer & IT Specialist</title>
+  <meta name="description" content="Portfolio of Abdirizak Ali — Web Developer, Network Engineer, IT Specialist.">
+  <meta name="author" content="Abdirizak Ali Abdikariim">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">  
+
+  
+
+</head>
+<body>
+
+<!-- Cursor -->
+<div id="cursor">
+  <div id="cursor-core"></div>
+  <div id="cursor-ring"></div>
+</div>
+<canvas id="cursor-trail"></canvas>
+
+<!-- Scroll progress -->
+<div id="scroll-bar"></div>
+
+<!-- Three.js background canvas -->
+<canvas id="three-canvas"></canvas>
+
+<!-- Preloader -->
+<div id="preloader" role="status" aria-label="Loading">
+  <canvas id="pre-canvas" width="140" height="140"></canvas>
+  <div class="pre-text">Initializing Systems</div>
+  <div class="pre-bar-wrap"><div class="pre-bar" id="pre-bar"></div></div>
+  <div class="pre-pct" id="pre-pct">0%</div>
+</div>
+
+<!-- Scroll top -->
+<button id="scroll-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" role="dialog" aria-label="Navigation">
+  <button class="mobile-close" id="mob-close">✕</button>
+  <a href="#hero" class="mob-link">Home</a>
+  <a href="#services" class="mob-link">Services</a>
+  <a href="#projects" class="mob-link">Projects</a>
+  <a href="#skills" class="mob-link">Skills</a>
+  <a href="#experience" class="mob-link">Experience</a>
+  <a href="#contact" class="mob-link">Contact</a>
+</div>
+
+<!-- Nav -->
+<header>
+  <nav class="nav" role="navigation" aria-label="Main">
+    <a href="#hero" class="nav-logo">ABDIRIZAK</a>
+    <ul class="nav-links" aria-label="Nav links">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="hero" aria-label="Hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-available reveal">
+          <span class="avail-dot"></span>
+          <span>Available for Work</span>
+        </div>
+        <h1 class="hero-name reveal" data-d="1">
+          <span class="hero-name-line"><span class="hero-name-inner">Hi, I'm</span></span>
+          <span class="hero-name-line"><span class="hero-name-inner delay1 grad">Abdirizak</span></span>
+        </h1>
+        <p class="hero-role reveal" data-d="2">
+          <span id="typing-text"></span><span class="type-cursor"></span>
+        </p>
+        <p class="hero-desc reveal" data-d="3">Building modern, responsive, and scalable digital solutions — from secure networks to powerful web systems that drive real results.</p>
+        <div class="hero-btns reveal" data-d="4">
+          <a href="#projects" class="btn-glow"><span>View My Work</span> <i class="fas fa-arrow-right"></i></a>
+          <a href="cv.pdf" download class="btn-ghost"><i class="fas fa-download"></i> Download CV</a>
+        </div>
+        <div class="hero-stats reveal" data-d="5">
+          <div class="stat-item"><span class="stat-val"><span class="count" data-t="30">0</span>+</span><span class="stat-label">Projects Done</span></div>
+          <div class="stat-sep"></div>
+          <div class="stat-item"><span class="stat-val"><span class="count" data-t="20">0</span>+</span><span class="stat-label">Happy Clients</span></div>
+          <div class="stat-sep"></div>
+          <div class="stat-item"><span class="stat-val"><span class="count" data-t="3">0</span>+</span><span class="stat-label">Years Exp</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-ring-1"></div>
+        <div class="hero-ring-2"></div>
+        <canvas id="hero-3d-canvas" aria-hidden="true"></canvas>
+        <div class="hero-float f1" aria-hidden="true">
+          <span class="float-icon">🌐</span>
+          <div><div class="float-lbl">Client Project</div><div class="float-val">Artisentech.com</div></div>
+        </div>
+        <div class="hero-float f2" aria-hidden="true">
+          <span class="float-icon">🛡️</span>
+          <div><div class="float-lbl">Certification</div><div class="float-val">Cisco CCNA</div></div>
+        </div>
+        <div class="hero-socials" aria-label="Social links">
+          <a href="https://github.com/Abdirizak51" target="_blank" rel="noopener" class="hero-soc" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/abdirizak-ali-765128c/" target="_blank" rel="noopener" class="hero-soc" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/RisaaqKariim" target="_blank" rel="noopener" class="hero-soc" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" aria-labelledby="svc-heading">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-label reveal">Services</div>
+      <h2 class="sec-title reveal" data-d="1" id="svc-heading">What I <span class="grad">Offer</span></h2>
+      <p class="sec-sub reveal" data-d="2">Precision-crafted digital solutions across every domain.</p>
+    </div>
+    <div class="services-grid reveal" data-d="2">
+      <article class="svc-card" data-svc="network-security">
+        <div class="svc-num">01 //</div>
+        <div class="svc-icon-wrap"><i class="fas fa-shield-halved"></i></div>
+        <h3>Network Security</h3>
+        <p>Enterprise-grade cybersecurity, endpoint protection, firewall configuration, and threat mitigation for your infrastructure.</p>
+        <button class="svc-more read-more" data-svc="network-security">Explore <i class="fas fa-arrow-right"></i></button>
+      </article>
+      <article class="svc-card" data-svc="web-dev">
+        <div class="svc-num">02 //</div>
+        <div class="svc-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+        <h3>Web Development</h3>
+        <p>Modern, scalable, and responsive web applications delivering seamless user experiences and measurable ROI.</p>
+        <button class="svc-more read-more" data-svc="web-dev">Explore <i class="fas fa-arrow-right"></i></button>
+      </article>
+      <article class="svc-card" data-svc="marketing">
+        <div class="svc-num">03 //</div>
+        <div class="svc-icon-wrap"><i class="fas fa-bullhorn"></i></div>
+        <h3>Digital Marketing</h3>
+        <p>Data-driven SEO, social media strategy, and growth-focused brand campaigns to amplify your online presence.</p>
+        <button class="svc-more read-more" data-svc="marketing">Explore <i class="fas fa-arrow-right"></i></button>
+      </article>
+      <article class="svc-card" data-svc="it">
+        <div class="svc-num">04 //</div>
+        <div class="svc-icon-wrap"><i class="fas fa-microchip"></i></div>
+        <h3>IT Solutions</h3>
+        <p>Hardware integration, system optimization, and scalable network architecture for modern organizations.</p>
+        <button class="svc-more read-more" data-svc="it">Explore <i class="fas fa-arrow-right"></i></button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" aria-labelledby="proj-heading">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-label reveal">Portfolio</div>
+      <h2 class="sec-title reveal" data-d="1" id="proj-heading">My <span class="grad">Projects</span></h2>
+      <p class="sec-sub reveal" data-d="2">Real-world solutions built with passion and precision.</p>
+    </div>
+    <div class="proj-filters reveal" data-d="3">
+      <button class="proj-flt active" data-filter="all">All</button>
+      <button class="proj-flt" data-filter="web">Web Dev</button>
+      <button class="proj-flt" data-filter="networking">Networking</button>
+      <button class="proj-flt" data-filter="design">Design</button>
+    </div>
+    <div class="projects-grid">
+      <article class="proj-card reveal" data-d="1" data-category="web">
+        <div class="proj-thumb">🏢<div class="proj-thumb-scan"></div><div class="proj-badge">★ Featured</div>
+          <div class="proj-actions">
+            <a href="https://artisentech.com" target="_blank" rel="noopener" class="proj-action-btn demo"><i class="fas fa-external-link-alt"></i> Live</a>
+            <a href="https://github.com/Abdirizak51" target="_blank" rel="noopener" class="proj-action-btn git"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags"><span class="proj-tag">HTML/CSS</span><span class="proj-tag">JS</span><span class="proj-tag">Client</span></div>
+          <h3 class="proj-title">Artisentech.com</h3>
+          <p class="proj-desc">A professional tech company website featuring modern design, service showcases, and lead generation.</p>
+        </div>
+      </article>
+      <article class="proj-card reveal" data-d="2" data-category="web">
+        <div class="proj-thumb">🛒<div class="proj-thumb-scan"></div>
+          <div class="proj-actions">
+            <a href="#" class="proj-action-btn demo"><i class="fas fa-external-link-alt"></i> Live</a>
+            <a href="https://github.com/Abdirizak51" target="_blank" rel="noopener" class="proj-action-btn git"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags"><span class="proj-tag">PHP</span><span class="proj-tag">MySQL</span></div>
+          <h3 class="proj-title">E-Commerce Platform</h3>
+          <p class="proj-desc">Full-featured online store with cart, product catalog, authentication, and admin dashboard.</p>
+        </div>
+      </article>
+      <article class="proj-card reveal" data-d="3" data-category="web">
+        <div class="proj-thumb">✍️<div class="proj-thumb-scan"></div>
+          <div class="proj-actions">
+            <a href="#" class="proj-action-btn demo"><i class="fas fa-external-link-alt"></i> Live</a>
+            <a href="https://github.com/Abdirizak51" target="_blank" rel="noopener" class="proj-action-btn git"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags"><span class="proj-tag">HTML</span><span class="proj-tag">CSS</span><span class="proj-tag">JS</span></div>
+          <h3 class="proj-title">Blog Platform</h3>
+          <p class="proj-desc">Responsive blogging platform with rich text editor, categories, and comment system.</p>
+        </div>
+      </article>
+      <article class="proj-card reveal" data-d="1" data-category="web">
+        <div class="proj-thumb">📊<div class="proj-thumb-scan"></div>
+          <div class="proj-actions">
+            <a href="#" class="proj-action-btn demo"><i class="fas fa-external-link-alt"></i> Live</a>
+            <a href="https://github.com/Abdirizak51" target="_blank" rel="noopener" class="proj-action-btn git"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags"><span class="proj-tag">JavaScript</span><span class="proj-tag">Charts</span></div>
+          <h3 class="proj-title">Admin Dashboard</h3>
+          <p class="proj-desc">Analytics dashboard with real-time charts, data tables, and dark/light mode.</p>
+        </div>
+      </article>
+      <article class="proj-card reveal" data-d="2" data-category="networking">
+        <div class="proj-thumb">🔒<div class="proj-thumb-scan"></div>
+          <div class="proj-actions">
+            <a href="#" class="proj-action-btn demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            <a href="https://github.com/Abdirizak51" target="_blank" rel="noopener" class="proj-action-btn git"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags"><span class="proj-tag">Cisco</span><span class="proj-tag">Security</span></div>
+          <h3 class="proj-title">Network Security Lab</h3>
+          <p class="proj-desc">Secure LAN with VLANs, firewall rules, and intrusion detection for a small business.</p>
+        </div>
+      </article>
+      <article class="proj-card reveal" data-d="3" data-category="design">
+        <div class="proj-thumb">🎨<div class="proj-thumb-scan"></div>
+          <div class="proj-actions">
+            <a href="#" class="proj-action-btn demo"><i class="fas fa-external-link-alt"></i> Live</a>
+            <a href="https://github.com/Abdirizak51" target="_blank" rel="noopener" class="proj-action-btn git"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags"><span class="proj-tag">HTML</span><span class="proj-tag">CSS</span></div>
+          <h3 class="proj-title">Portfolio Template</h3>
+          <p class="proj-desc">Premium, fully responsive portfolio template with smooth animations and customization.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" aria-labelledby="skills-heading">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-label reveal">Expertise</div>
+      <h2 class="sec-title reveal" data-d="1" id="skills-heading">Tech <span class="grad">Stack</span></h2>
+      <p class="sec-sub reveal" data-d="2">Technologies and tools I use to bring ideas to life.</p>
+    </div>
+    <canvas id="skills-3d-canvas" aria-label="Interactive 3D skills sphere — drag to rotate"></canvas>
+    <div class="skill-bars reveal" data-d="2">
+      <div class="skill-item">
+        <div class="skill-head"><span class="skill-name">Web Development</span><span class="skill-pct">90%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-w="90"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span class="skill-name">Networking & Security</span><span class="skill-pct">80%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-w="80"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span class="skill-name">Graphic Design</span><span class="skill-pct">85%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-w="85"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span class="skill-name">Digital Marketing</span><span class="skill-pct">75%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-w="75"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-band" aria-label="Statistics">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stats-cell reveal" data-d="1"><div class="stats-num"><span class="count" data-t="30">0</span>+</div><div class="stats-lbl">Projects Done</div></div>
+      <div class="stats-cell reveal" data-d="2"><div class="stats-num"><span class="count" data-t="20">0</span>+</div><div class="stats-lbl">Happy Clients</div></div>
+      <div class="stats-cell reveal" data-d="3"><div class="stats-num"><span class="count" data-t="3">0</span>+</div><div class="stats-lbl">Years Experience</div></div>
+      <div class="stats-cell reveal" data-d="4"><div class="stats-num"><span class="count" data-t="5">0</span></div><div class="stats-lbl">Certifications</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<section id="experience" aria-labelledby="exp-heading">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-label reveal">Journey</div>
+      <h2 class="sec-title reveal" data-d="1" id="exp-heading">Work <span class="grad">Experience</span></h2>
+      <p class="sec-sub reveal" data-d="2">My professional journey and key milestones.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-date">2024 — Present</div>
+          <div class="tl-title">Freelance Web Developer</div>
+          <div class="tl-org">Self-Employed · Remote</div>
+          <p class="tl-desc">Building custom web solutions for clients worldwide. Notable project: Artisentech.com — a full business website with modern design and lead generation.</p>
+          <div class="tl-tags"><span class="tl-tag">HTML/CSS</span><span class="tl-tag">JavaScript</span><span class="tl-tag">PHP</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--violet);box-shadow:0 0 20px rgba(176,38,255,0.4)"></div>
+        <div class="tl-card">
+          <div class="tl-date">2023 — 2024</div>
+          <div class="tl-title">Web Security Assistant</div>
+          <div class="tl-org">IT Firm · Mogadishu, Somalia</div>
+          <p class="tl-desc">Improved website security infrastructure, collaborated with senior developers on security upgrades, and implemented best practices for data protection and vulnerability assessments.</p>
+          <div class="tl-tags"><span class="tl-tag">Security</span><span class="tl-tag">Linux</span><span class="tl-tag">Networking</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--gold);box-shadow:0 0 20px rgba(255,215,0,0.4)"></div>
+        <div class="tl-card">
+          <div class="tl-date">2022 — 2023</div>
+          <div class="tl-title">Sales Specialist</div>
+          <div class="tl-org">Tech Retail · Mogadishu, Somalia</div>
+          <p class="tl-desc">Increased sales by 25% through strategic client relationship management, product demonstrations, and digital marketing efforts.</p>
+          <div class="tl-tags"><span class="tl-tag">Sales</span><span class="tl-tag">CRM</span><span class="tl-tag">Marketing</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--magenta);box-shadow:0 0 20px rgba(255,0,127,0.4)"></div>
+        <div class="tl-card">
+          <div class="tl-date">2020 — 2024</div>
+          <div class="tl-title">Bachelor of Computer Science</div>
+          <div class="tl-org">Salaam University · Mogadishu, Somalia</div>
+          <p class="tl-desc">Studied Computer Science with focus on networking, software engineering, and cybersecurity. Completed multiple industry certifications alongside the degree.</p>
+          <div class="tl-tags"><span class="tl-tag">CS Degree</span><span class="tl-tag">Networks</span><span class="tl-tag">Software Eng</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" aria-labelledby="tl-heading">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-label reveal">Reviews</div>
+      <h2 class="sec-title reveal" data-d="1" id="tl-heading">Client <span class="grad">Testimonials</span></h2>
+      <p class="sec-sub reveal" data-d="2">What people say about working with me.</p>
+    </div>
+    <canvas id="tl-cube-canvas" aria-label="Interactive testimonials cube — drag to rotate"></canvas>
+    <div class="tl-info reveal" data-d="1">
+      <div class="tl-quote-stars">★★★★★</div>
+      <p class="tl-quote-text" id="tl-text">"Abdirizak delivered exactly what we needed for our company website. Clean design, fast delivery, and excellent communication throughout the project."</p>
+      <div class="tl-quote-author">
+        <div class="tl-avatar" id="tl-avatar">AH</div>
+        <div>
+          <div class="tl-name" id="tl-name">Ahmed Hassan</div>
+          <div class="tl-role-txt" id="tl-role">CEO · Artisentech</div>
+        </div>
+      </div>
+    </div>
+    <div class="tl-nav reveal" data-d="2">
+      <button class="tl-nav-btn" id="tl-prev" aria-label="Previous">‹</button>
+      <button class="tl-nav-btn" id="tl-next" aria-label="Next">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- CERTS -->
+<section id="certs" aria-labelledby="cert-heading">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-label reveal">Credentials</div>
+      <h2 class="sec-title reveal" data-d="1" id="cert-heading">Certificates & <span class="grad">Achievements</span></h2>
+      <p class="sec-sub reveal" data-d="2">Verified certifications from globally recognized institutions.</p>
+    </div>
+    <div class="certs-grid">
+      <article class="cert-card reveal" data-d="1">
+        <div class="cert-thumb">🎓</div>
+        <div class="cert-body">
+          <div class="cert-issuer">Johns Hopkins · Coursera</div>
+          <h3 class="cert-title">HTML, CSS & JavaScript for Web Developers</h3>
+          <p class="cert-date">Dec 1, 2024</p>
+        </div>
+      </article>
+      <article class="cert-card reveal" data-d="2">
+        <div class="cert-thumb">📜</div>
+        <div class="cert-body">
+          <div class="cert-issuer">YALI Network</div>
+          <h3 class="cert-title">Digital Marketing for Entrepreneurs</h3>
+          <p class="cert-date">Feb 15, 2025</p>
+        </div>
+      </article>
+      <article class="cert-card reveal" data-d="3">
+        <div class="cert-thumb">🔵</div>
+        <div class="cert-body">
+          <div class="cert-issuer">Cisco Systems</div>
+          <h3 class="cert-title">Cisco Certified Network Associate (CCNA)</h3>
+          <p class="cert-date">Aug 20, 2025 · Valid Until 2028</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-label reveal">Get In Touch</div>
+      <h2 class="sec-title reveal" data-d="1" id="contact-heading">Let's <span class="grad">Connect</span></h2>
+      <p class="sec-sub reveal" data-d="2">Ready to start a project or have a question? I'd love to hear from you.</p>
+    </div>
+    <div class="contact-layout">
+      <div class="reveal">
+        <div class="contact-info-items">
+          <div class="cinfo-card">
+            <div class="cinfo-icon"><i class="fas fa-envelope"></i></div>
+            <div><div class="cinfo-lbl">Email</div><div class="cinfo-val"><a href="mailto:abdirizak873@gmail.com">abdirizak873@gmail.com</a></div></div>
+          </div>
+          <div class="cinfo-card">
+            <div class="cinfo-icon"><i class="fas fa-phone"></i></div>
+            <div><div class="cinfo-lbl">Phone</div><div class="cinfo-val"><a href="tel:+252616765128">+252 616 765 128</a></div></div>
+          </div>
+          <div class="cinfo-card">
+            <div class="cinfo-icon"><i class="fas fa-location-dot"></i></div>
+            <div><div class="cinfo-lbl">Location</div><div class="cinfo-val">Mogadishu, Somalia</div></div>
+          </div>
+        </div>
+        <a href="https://wa.me/252616765128" target="_blank" rel="noopener" class="wa-btn"><i class="fab fa-whatsapp" style="font-size:18px"></i> Chat on WhatsApp</a>
+      </div>
+      <div class="contact-form reveal" data-d="2">
+        <div class="form-title">Send a Message</div>
+        <form id="contactForm" novalidate>
+          <div class="form-2col">
+            <div class="form-grp">
+              <label class="form-lbl" for="name">Name</label>
+              <input class="form-inp" type="text" id="name" name="name" placeholder="Abdirizak Ali" required>
+            </div>
+            <div class="form-grp">
+              <label class="form-lbl" for="email">Email</label>
+              <input class="form-inp" type="email" id="email" name="email" placeholder="hello@email.com" required>
+            </div>
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="subject">Subject</label>
+            <input class="form-inp" type="text" id="subject" name="subject" placeholder="Project Inquiry">
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="message">Message</label>
+            <textarea class="form-ta" id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="form-submit">
+            <span id="submit-text">Send Message</span> <i class="fas fa-paper-plane" id="submit-icon"></i>
+          </button>
+          <div class="form-feedback" id="form-feedback"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <a href="#hero" class="footer-logo">ABDIRIZAK</a>
+      <nav class="footer-nav-links" aria-label="Footer nav">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="https://github.com/Abdirizak51" target="_blank" rel="noopener" class="footer-soc" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/abdirizak-ali-765128c/" target="_blank" rel="noopener" class="footer-soc" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://x.com/RisaaqKariim" target="_blank" rel="noopener" class="footer-soc" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="mailto:abdirizak873@gmail.com" class="footer-soc" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; <time datetime="2025">2025</time> Abdirizak Ali Abdikariim. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Service Modal -->
+<div class="modal-bg" id="serviceModal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-x" id="modalX">✕</button>
+    <h2 class="modal-title" id="modal-title"></h2>
+    <p class="modal-desc" id="modal-desc"></p>
+  </div>
+</div>
+
+<!-- THREE.JS + ALL SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
