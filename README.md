@@ -35,9 +35,12 @@ This is my official professional portfolio website designed to showcase my capab
 
 ---
 
+---
+
 ## 📸 Interface Preview
 
 <div align="center">
+  <img src="images/portfolio-preview.png" alt="Portfolio Preview" width="100%" />
   <p><i>Featuring an enterprise-grade dark theme tailored for modern client and recruitment interaction.</i></p>
 </div>
 
@@ -49,4 +52,4 @@ If you wish to clone this portfolio and explore the local architecture:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/Abdirizak51/portfolio.git](https://github.com/Abdirizak51/portfolio.git)
+   git clone [https://github.com/Abdirizak51/portfolio.git
