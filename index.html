@@ -10,27 +10,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">  
-
-  
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Cursor -->
+<!-- ═══ CURSOR ═══════════════════════════════════════ -->
 <div id="cursor">
   <div id="cursor-core"></div>
   <div id="cursor-ring"></div>
 </div>
 <canvas id="cursor-trail"></canvas>
 
-<!-- Scroll progress -->
+<!-- ═══ SCROLL PROGRESS ══════════════════════════════ -->
 <div id="scroll-bar"></div>
 
-<!-- Three.js background canvas -->
+<!-- ═══ THREE.JS BG CANVAS ══════════════════════════ -->
 <canvas id="three-canvas"></canvas>
 
-<!-- Preloader -->
+<!-- ═══ PRELOADER ════════════════════════════════════ -->
 <div id="preloader" role="status" aria-label="Loading">
   <canvas id="pre-canvas" width="140" height="140"></canvas>
   <div class="pre-text">Initializing Systems</div>
@@ -38,26 +35,26 @@
   <div class="pre-pct" id="pre-pct">0%</div>
 </div>
 
-<!-- Scroll top -->
+<!-- ═══ SCROLL TOP ═══════════════════════════════════ -->
 <button id="scroll-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
-<!-- Mobile Menu -->
+<!-- ═══ MOBILE MENU ══════════════════════════════════ -->
 <div id="mobile-menu" role="dialog" aria-label="Navigation">
   <button class="mobile-close" id="mob-close">✕</button>
-  <a href="#hero" class="mob-link">Home</a>
-  <a href="#services" class="mob-link">Services</a>
-  <a href="#projects" class="mob-link">Projects</a>
-  <a href="#skills" class="mob-link">Skills</a>
+  <a href="#hero"       class="mob-link">Home</a>
+  <a href="#services"   class="mob-link">Services</a>
+  <a href="#projects"   class="mob-link">Projects</a>
+  <a href="#skills"     class="mob-link">Skills</a>
   <a href="#experience" class="mob-link">Experience</a>
-  <a href="#contact" class="mob-link">Contact</a>
+  <a href="#contact"    class="mob-link">Contact</a>
 </div>
 
-<!-- Nav -->
+<!-- ═══ NAV ══════════════════════════════════════════ -->
 <header>
   <nav class="nav" role="navigation" aria-label="Main">
     <a href="#hero" class="nav-logo">ABDIRIZAK</a>
     <ul class="nav-links" aria-label="Nav links">
-      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#hero"       class="active">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -73,7 +70,7 @@
   </nav>
 </header>
 
-<!-- HERO -->
+<!-- ═══ HERO ══════════════════════════════════════════ -->
 <section id="hero" aria-label="Hero">
   <div class="container">
     <div class="hero-grid">
@@ -116,16 +113,16 @@
           <div><div class="float-lbl">Certification</div><div class="float-val">Cisco CCNA</div></div>
         </div>
         <div class="hero-socials" aria-label="Social links">
-          <a href="https://github.com/Abdirizak51" target="_blank" rel="noopener" class="hero-soc" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/abdirizak-ali-765128c/" target="_blank" rel="noopener" class="hero-soc" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://x.com/RisaaqKariim" target="_blank" rel="noopener" class="hero-soc" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://github.com/Abdirizak51"                              target="_blank" rel="noopener" class="hero-soc" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/abdirizak-ali-765128c/"          target="_blank" rel="noopener" class="hero-soc" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/RisaaqKariim"                                  target="_blank" rel="noopener" class="hero-soc" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- ═══ SERVICES ══════════════════════════════════════ -->
 <section id="services" aria-labelledby="svc-heading">
   <div class="container">
     <div class="sec-header">
@@ -166,7 +163,7 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- ═══ PROJECTS ══════════════════════════════════════ -->
 <section id="projects" aria-labelledby="proj-heading">
   <div class="container">
     <div class="sec-header">
@@ -249,7 +246,7 @@
       <article class="proj-card reveal" data-d="3" data-category="design">
         <div class="proj-thumb">🎨<div class="proj-thumb-scan"></div>
           <div class="proj-actions">
-            <a href="#" class="proj-action-btn demo"><i class="fas fa-external-link-alt"></i> Live</a>
+            <a href="https://Abdirizakali.com" class="proj-action-btn demo"><i class="fas fa-external-link-alt"></i> Live</a>
             <a href="https://github.com/Abdirizak51" target="_blank" rel="noopener" class="proj-action-btn git"><i class="fab fa-github"></i> Code</a>
           </div>
         </div>
@@ -263,7 +260,7 @@
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- ═══ SKILLS ════════════════════════════════════════ -->
 <section id="skills" aria-labelledby="skills-heading">
   <div class="container">
     <div class="sec-header">
@@ -293,7 +290,7 @@
   </div>
 </section>
 
-<!-- STATS -->
+<!-- ═══ STATS ══════════════════════════════════════════ -->
 <div class="stats-band" aria-label="Statistics">
   <div class="container">
     <div class="stats-row">
@@ -305,7 +302,7 @@
   </div>
 </div>
 
-<!-- EXPERIENCE -->
+<!-- ═══ EXPERIENCE ════════════════════════════════════ -->
 <section id="experience" aria-labelledby="exp-heading">
   <div class="container">
     <div class="sec-header">
@@ -358,7 +355,7 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- ═══ TESTIMONIALS — CSS 3D CUBE (replaces Three.js) ═ -->
 <section id="testimonials" aria-labelledby="tl-heading">
   <div class="container">
     <div class="sec-header">
@@ -366,10 +363,42 @@
       <h2 class="sec-title reveal" data-d="1" id="tl-heading">Client <span class="grad">Testimonials</span></h2>
       <p class="sec-sub reveal" data-d="2">What people say about working with me.</p>
     </div>
-    <canvas id="tl-cube-canvas" aria-label="Interactive testimonials cube — drag to rotate"></canvas>
+
+    <!-- CSS 3D Cube — zero WebGL cost -->
+    <div class="cube-scene reveal" data-d="1" aria-hidden="true" title="Drag to rotate">
+      <div class="cube-stage">
+        <div class="cube" id="css-cube">
+          <div class="cube-face cube-front">
+            <span class="cube-face-icon">🌐</span>
+            <span class="cube-face-label">Web Dev</span>
+          </div>
+          <div class="cube-face cube-back">
+            <span class="cube-face-icon">🛡️</span>
+            <span class="cube-face-label">Security</span>
+          </div>
+          <div class="cube-face cube-left">
+            <span class="cube-face-icon">📡</span>
+            <span class="cube-face-label">Networks</span>
+          </div>
+          <div class="cube-face cube-right">
+            <span class="cube-face-icon">📈</span>
+            <span class="cube-face-label">Marketing</span>
+          </div>
+          <div class="cube-face cube-top">
+            <span class="cube-face-icon">💡</span>
+            <span class="cube-face-label">Innovation</span>
+          </div>
+          <div class="cube-face cube-bottom">
+            <span class="cube-face-icon">⚙️</span>
+            <span class="cube-face-label">IT Solutions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="tl-info reveal" data-d="1">
       <div class="tl-quote-stars">★★★★★</div>
-      <p class="tl-quote-text" id="tl-text">"Abdirizak delivered exactly what we needed for our company website. Clean design, fast delivery, and excellent communication throughout the project."</p>
+      <p class="tl-quote-text" id="tl-text" style="transition:opacity .22s ease">"Abdirizak delivered exactly what we needed for our company website. Clean design, fast delivery, and excellent communication throughout the project."</p>
       <div class="tl-quote-author">
         <div class="tl-avatar" id="tl-avatar">AH</div>
         <div>
@@ -385,44 +414,129 @@
   </div>
 </section>
 
-<!-- CERTS -->
+<!-- ═══ CERTIFICATES — NEW IMAGE GRID + LIGHTBOX ══════ -->
 <section id="certs" aria-labelledby="cert-heading">
   <div class="container">
     <div class="sec-header">
       <div class="sec-label reveal">Credentials</div>
       <h2 class="sec-title reveal" data-d="1" id="cert-heading">Certificates & <span class="grad">Achievements</span></h2>
-      <p class="sec-sub reveal" data-d="2">Verified certifications from globally recognized institutions.</p>
+      <p class="sec-sub reveal" data-d="2">Verified certifications from globally recognized institutions. Click any card to preview.</p>
     </div>
+
+    <!-- Cert grid: replace data-img="" with your actual image paths -->
     <div class="certs-grid">
-      <article class="cert-card reveal" data-d="1">
-        <div class="cert-thumb">🎓</div>
+
+      <article class="cert-card reveal" data-d="1"
+               data-img="certs/johns-hopkins.jpg"
+               role="button" tabindex="0"
+               aria-label="Preview Johns Hopkins certificate">
+        <div class="cert-thumb-wrap">
+          <!-- Lazy-loaded thumbnail; placeholder shown until in-view -->
+          <img
+            class="cert-thumb-img"
+            data-src="certs/johns-hopkins.jpg"
+            src="data:images/ xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'/%3E"
+            alt="HTML CSS JS for Web Developers certificate thumbnail"
+            loading="lazy"
+          >
+          <div class="cert-thumb-overlay">
+            <div class="cert-thumb-placeholder" aria-hidden="true">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+          </div>
+          <div class="cert-preview-hint"><i class="fas fa-expand"></i> Preview</div>
+        </div>
         <div class="cert-body">
-          <div class="cert-issuer">Johns Hopkins · Coursera</div>
+          <div class="cert-issuer-row">
+            <span class="cert-issuer-badge">
+              <i class="fas fa-university"></i> Johns Hopkins · Coursera
+            </span>
+            <span class="cert-verified"><i class="fas fa-circle-check"></i> Verified</span>
+          </div>
           <h3 class="cert-title">HTML, CSS & JavaScript for Web Developers</h3>
-          <p class="cert-date">Dec 1, 2024</p>
+          <p class="cert-date"><i class="fas fa-calendar-alt"></i> Dec 1, 2024</p>
         </div>
       </article>
-      <article class="cert-card reveal" data-d="2">
-        <div class="cert-thumb">📜</div>
+
+      <article class="cert-card reveal" data-d="2"
+               data-img="certs/yali-marketing.jpg"
+               role="button" tabindex="0"
+               aria-label="Preview YALI certificate">
+        <div class="cert-thumb-wrap">
+          <img
+            class="cert-thumb-img"
+            data-src="certs/yali-marketing.jpg"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'/%3E"
+            alt="Digital Marketing for Entrepreneurs certificate thumbnail"
+            loading="lazy"
+          >
+          <div class="cert-thumb-overlay">
+            <div class="cert-thumb-placeholder" aria-hidden="true">
+              <i class="fas fa-scroll"></i>
+            </div>
+          </div>
+          <div class="cert-preview-hint"><i class="fas fa-expand"></i> Preview</div>
+        </div>
         <div class="cert-body">
-          <div class="cert-issuer">YALI Network</div>
+          <div class="cert-issuer-row">
+            <span class="cert-issuer-badge">
+              <i class="fas fa-globe-africa"></i> YALI Network
+            </span>
+            <span class="cert-verified"><i class="fas fa-circle-check"></i> Verified</span>
+          </div>
           <h3 class="cert-title">Digital Marketing for Entrepreneurs</h3>
-          <p class="cert-date">Feb 15, 2025</p>
+          <p class="cert-date"><i class="fas fa-calendar-alt"></i> Feb 15, 2025</p>
         </div>
       </article>
-      <article class="cert-card reveal" data-d="3">
-        <div class="cert-thumb">🔵</div>
+
+      <article class="cert-card reveal" data-d="3"
+               data-img="certs/ccna.jpg"
+               role="button" tabindex="0"
+               aria-label="Preview CCNA certificate">
+        <div class="cert-thumb-wrap">
+          <img
+            class="cert-thumb-img"
+            data-src="certs/ccna.jpg"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'/%3E"
+            alt="Cisco CCNA certificate thumbnail"
+            loading="lazy"
+          >
+          <div class="cert-thumb-overlay">
+            <div class="cert-thumb-placeholder" aria-hidden="true">
+              <i class="fas fa-network-wired"></i>
+            </div>
+          </div>
+          <div class="cert-preview-hint"><i class="fas fa-expand"></i> Preview</div>
+        </div>
         <div class="cert-body">
-          <div class="cert-issuer">Cisco Systems</div>
+          <div class="cert-issuer-row">
+            <span class="cert-issuer-badge cert-issuer-blue">
+              <i class="fas fa-server"></i> Cisco Systems
+            </span>
+            <span class="cert-verified cert-valid"><i class="fas fa-shield-halved"></i> Valid 2028</span>
+          </div>
           <h3 class="cert-title">Cisco Certified Network Associate (CCNA)</h3>
-          <p class="cert-date">Aug 20, 2025 · Valid Until 2028</p>
+          <p class="cert-date"><i class="fas fa-calendar-alt"></i> Aug 20, 2025</p>
         </div>
       </article>
-    </div>
+
+    </div><!-- /certs-grid -->
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- ═══ CERTIFICATE LIGHTBOX ═════════════════════════ -->
+<div id="cert-lightbox" role="dialog" aria-modal="true" aria-label="Certificate preview">
+  <div class="cert-lb-inner">
+    <button class="cert-lb-close" aria-label="Close preview">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="cert-lb-loader"><div class="cert-lb-spinner"></div></div>
+    <img class="cert-lb-img" src="" alt="Certificate full view">
+    <p class="cert-lb-hint">Press <kbd>Esc</kbd> or click outside to close</p>
+  </div>
+</div>
+
+<!-- ═══ CONTACT ═══════════════════════════════════════ -->
 <section id="contact" aria-labelledby="contact-heading">
   <div class="container">
     <div class="sec-header">
@@ -446,7 +560,9 @@
             <div><div class="cinfo-lbl">Location</div><div class="cinfo-val">Mogadishu, Somalia</div></div>
           </div>
         </div>
-        <a href="https://wa.me/252616765128" target="_blank" rel="noopener" class="wa-btn"><i class="fab fa-whatsapp" style="font-size:18px"></i> Chat on WhatsApp</a>
+        <a href="https://wa.me/252616765128" target="_blank" rel="noopener" class="wa-btn">
+          <i class="fab fa-whatsapp" style="font-size:18px"></i> Chat on WhatsApp
+        </a>
       </div>
       <div class="contact-form reveal" data-d="2">
         <div class="form-title">Send a Message</div>
@@ -479,7 +595,7 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══ FOOTER ════════════════════════════════════════ -->
 <footer role="contentinfo">
   <div class="container">
     <div class="footer-inner">
@@ -491,17 +607,17 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="footer-socials">
-        <a href="https://github.com/Abdirizak51" target="_blank" rel="noopener" class="footer-soc" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/Abdirizak51"                     target="_blank" rel="noopener" class="footer-soc" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/abdirizak-ali-765128c/" target="_blank" rel="noopener" class="footer-soc" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://x.com/RisaaqKariim" target="_blank" rel="noopener" class="footer-soc" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-        <a href="mailto:abdirizak873@gmail.com" class="footer-soc" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://x.com/RisaaqKariim"                         target="_blank" rel="noopener" class="footer-soc" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="mailto:abdirizak873@gmail.com"                                       class="footer-soc" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
     <p class="footer-copy">&copy; <time datetime="2025">2025</time> Abdirizak Ali Abdikariim. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- Service Modal -->
+<!-- ═══ SERVICE MODAL ══════════════════════════════════ -->
 <div class="modal-bg" id="serviceModal" role="dialog" aria-modal="true">
   <div class="modal-box">
     <button class="modal-x" id="modalX">✕</button>
@@ -510,9 +626,8 @@
   </div>
 </div>
 
-<!-- THREE.JS + ALL SCRIPTS -->
+<!-- THREE.JS + SCRIPTS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
 <script src="script.js"></script>
 
 </body>
